@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09F3681225860BFB005B7453 /* Moon_AnimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F3681125860BFB005B7453 /* Moon_AnimationApp.swift */; };
+		09F3681425860BFB005B7453 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F3681325860BFB005B7453 /* ContentView.swift */; };
+		09F3681625860BFD005B7453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09F3681525860BFD005B7453 /* Assets.xcassets */; };
+		09F3681925860BFD005B7453 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09F3681825860BFD005B7453 /* Preview Assets.xcassets */; };
+		09F3682425860BFD005B7453 /* Moon_AnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F3682325860BFD005B7453 /* Moon_AnimationTests.swift */; };
+		09F3682F25860BFD005B7453 /* Moon_AnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F3682E25860BFD005B7453 /* Moon_AnimationUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		09F3682025860BFD005B7453 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09F3680625860BFA005B7453 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09F3680D25860BFA005B7453;
+			remoteInfo = "Moon-Animation";
+		};
+		09F3682B25860BFD005B7453 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09F3680625860BFA005B7453 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09F3680D25860BFA005B7453;
+			remoteInfo = "Moon-Animation";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09F3680E25860BFB005B7453 /* Moon-Animation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moon-Animation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09F3681125860BFB005B7453 /* Moon_AnimationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moon_AnimationApp.swift; sourceTree = "<group>"; };
+		09F3681325860BFB005B7453 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		09F3681525860BFD005B7453 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		09F3681825860BFD005B7453 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		09F3681A25860BFD005B7453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09F3681F25860BFD005B7453 /* Moon-AnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Moon-AnimationTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09F3682325860BFD005B7453 /* Moon_AnimationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moon_AnimationTests.swift; sourceTree = "<group>"; };
+		09F3682525860BFD005B7453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09F3682A25860BFD005B7453 /* Moon-AnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Moon-AnimationUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09F3682E25860BFD005B7453 /* Moon_AnimationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moon_AnimationUITests.swift; sourceTree = "<group>"; };
+		09F3683025860BFD005B7453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09F3680B25860BFA005B7453 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09F3681C25860BFD005B7453 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09F3682725860BFD005B7453 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09F3680525860BFA005B7453 = {
+			isa = PBXGroup;
+			children = (
+				09F3681025860BFB005B7453 /* Moon-Animation */,
+				09F3682225860BFD005B7453 /* Moon-AnimationTests */,
+				09F3682D25860BFD005B7453 /* Moon-AnimationUITests */,
+				09F3680F25860BFB005B7453 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		09F3680F25860BFB005B7453 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09F3680E25860BFB005B7453 /* Moon-Animation.app */,
+				09F3681F25860BFD005B7453 /* Moon-AnimationTests.xctest */,
+				09F3682A25860BFD005B7453 /* Moon-AnimationUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		09F3681025860BFB005B7453 /* Moon-Animation */ = {
+			isa = PBXGroup;
+			children = (
+				09F3681125860BFB005B7453 /* Moon_AnimationApp.swift */,
+				09F3681325860BFB005B7453 /* ContentView.swift */,
+				09F3681525860BFD005B7453 /* Assets.xcassets */,
+				09F3681A25860BFD005B7453 /* Info.plist */,
+				09F3681725860BFD005B7453 /* Preview Content */,
+			);
+			path = "Moon-Animation";
+			sourceTree = "<group>";
+		};
+		09F3681725860BFD005B7453 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				09F3681825860BFD005B7453 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		09F3682225860BFD005B7453 /* Moon-AnimationTests */ = {
+			isa = PBXGroup;
+			children = (
+				09F3682325860BFD005B7453 /* Moon_AnimationTests.swift */,
+				09F3682525860BFD005B7453 /* Info.plist */,
+			);
+			path = "Moon-AnimationTests";
+			sourceTree = "<group>";
+		};
+		09F3682D25860BFD005B7453 /* Moon-AnimationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				09F3682E25860BFD005B7453 /* Moon_AnimationUITests.swift */,
+				09F3683025860BFD005B7453 /* Info.plist */,
+			);
+			path = "Moon-AnimationUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		09F3680D25860BFA005B7453 /* Moon-Animation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09F3683325860BFD005B7453 /* Build configuration list for PBXNativeTarget "Moon-Animation" */;
+			buildPhases = (
+				09F3680A25860BFA005B7453 /* Sources */,
+				09F3680B25860BFA005B7453 /* Frameworks */,
+				09F3680C25860BFA005B7453 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Moon-Animation";
+			productName = "Moon-Animation";
+			productReference = 09F3680E25860BFB005B7453 /* Moon-Animation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		09F3681E25860BFD005B7453 /* Moon-AnimationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09F3683625860BFD005B7453 /* Build configuration list for PBXNativeTarget "Moon-AnimationTests" */;
+			buildPhases = (
+				09F3681B25860BFD005B7453 /* Sources */,
+				09F3681C25860BFD005B7453 /* Frameworks */,
+				09F3681D25860BFD005B7453 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09F3682125860BFD005B7453 /* PBXTargetDependency */,
+			);
+			name = "Moon-AnimationTests";
+			productName = "Moon-AnimationTests";
+			productReference = 09F3681F25860BFD005B7453 /* Moon-AnimationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		09F3682925860BFD005B7453 /* Moon-AnimationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09F3683925860BFD005B7453 /* Build configuration list for PBXNativeTarget "Moon-AnimationUITests" */;
+			buildPhases = (
+				09F3682625860BFD005B7453 /* Sources */,
+				09F3682725860BFD005B7453 /* Frameworks */,
+				09F3682825860BFD005B7453 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09F3682C25860BFD005B7453 /* PBXTargetDependency */,
+			);
+			name = "Moon-AnimationUITests";
+			productName = "Moon-AnimationUITests";
+			productReference = 09F3682A25860BFD005B7453 /* Moon-AnimationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		09F3680625860BFA005B7453 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					09F3680D25860BFA005B7453 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					09F3681E25860BFD005B7453 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 09F3680D25860BFA005B7453;
+					};
+					09F3682925860BFD005B7453 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 09F3680D25860BFA005B7453;
+					};
+				};
+			};
+			buildConfigurationList = 09F3680925860BFA005B7453 /* Build configuration list for PBXProject "Moon-Animation" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 09F3680525860BFA005B7453;
+			productRefGroup = 09F3680F25860BFB005B7453 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				09F3680D25860BFA005B7453 /* Moon-Animation */,
+				09F3681E25860BFD005B7453 /* Moon-AnimationTests */,
+				09F3682925860BFD005B7453 /* Moon-AnimationUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		09F3680C25860BFA005B7453 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09F3681925860BFD005B7453 /* Preview Assets.xcassets in Resources */,
+				09F3681625860BFD005B7453 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09F3681D25860BFD005B7453 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09F3682825860BFD005B7453 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09F3680A25860BFA005B7453 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09F3681425860BFB005B7453 /* ContentView.swift in Sources */,
+				09F3681225860BFB005B7453 /* Moon_AnimationApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09F3681B25860BFD005B7453 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09F3682425860BFD005B7453 /* Moon_AnimationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09F3682625860BFD005B7453 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09F3682F25860BFD005B7453 /* Moon_AnimationUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		09F3682125860BFD005B7453 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09F3680D25860BFA005B7453 /* Moon-Animation */;
+			targetProxy = 09F3682025860BFD005B7453 /* PBXContainerItemProxy */;
+		};
+		09F3682C25860BFD005B7453 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09F3680D25860BFA005B7453 /* Moon-Animation */;
+			targetProxy = 09F3682B25860BFD005B7453 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		09F3683125860BFD005B7453 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		09F3683225860BFD005B7453 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		09F3683425860BFD005B7453 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Moon-Animation/Preview Content\"";
+				DEVELOPMENT_TEAM = NXWN29JR56;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Moon-Animation/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.leekat.Moon-Animation";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		09F3683525860BFD005B7453 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Moon-Animation/Preview Content\"";
+				DEVELOPMENT_TEAM = NXWN29JR56;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Moon-Animation/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.leekat.Moon-Animation";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		09F3683725860BFD005B7453 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NXWN29JR56;
+				INFOPLIST_FILE = "Moon-AnimationTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.leekat.Moon-AnimationTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Moon-Animation.app/Moon-Animation";
+			};
+			name = Debug;
+		};
+		09F3683825860BFD005B7453 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NXWN29JR56;
+				INFOPLIST_FILE = "Moon-AnimationTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.leekat.Moon-AnimationTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Moon-Animation.app/Moon-Animation";
+			};
+			name = Release;
+		};
+		09F3683A25860BFD005B7453 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NXWN29JR56;
+				INFOPLIST_FILE = "Moon-AnimationUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.leekat.Moon-AnimationUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Moon-Animation";
+			};
+			name = Debug;
+		};
+		09F3683B25860BFD005B7453 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NXWN29JR56;
+				INFOPLIST_FILE = "Moon-AnimationUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.leekat.Moon-AnimationUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Moon-Animation";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09F3680925860BFA005B7453 /* Build configuration list for PBXProject "Moon-Animation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09F3683125860BFD005B7453 /* Debug */,
+				09F3683225860BFD005B7453 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09F3683325860BFD005B7453 /* Build configuration list for PBXNativeTarget "Moon-Animation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09F3683425860BFD005B7453 /* Debug */,
+				09F3683525860BFD005B7453 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09F3683625860BFD005B7453 /* Build configuration list for PBXNativeTarget "Moon-AnimationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09F3683725860BFD005B7453 /* Debug */,
+				09F3683825860BFD005B7453 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09F3683925860BFD005B7453 /* Build configuration list for PBXNativeTarget "Moon-AnimationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09F3683A25860BFD005B7453 /* Debug */,
+				09F3683B25860BFD005B7453 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 09F3680625860BFA005B7453 /* Project object */;
+}
