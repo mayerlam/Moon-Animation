@@ -26,6 +26,8 @@ struct StonePitView: View {
 struct StonePitView_Previews: PreviewProvider {
     static var previews: some View {
         StonePitView()
+            .previewLayout(.fixed(width: 400, height: 400))
+        StonePitView()
             .previewLayout(.fixed(width: 270, height: 270))
     }
 }

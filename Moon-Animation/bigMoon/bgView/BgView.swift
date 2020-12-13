@@ -9,15 +9,24 @@ import SwiftUI
 
 struct BgView: View {
     var body: some View {
-        ZStack(alignment: .topLeading) {
-            BgImage()
-            ForEach(0..<StonePitParameters.pits.count) { i in
-                Image("stonePit").resizable()
-                    .frame(width: StonePitParameters.pits[i].size, height: StonePitParameters.pits[i].size, alignment: .topLeading)
-                    .offset(x: StonePitParameters.pits[i].position.0, y: StonePitParameters.pits[i].position.1)
+        GeometryReader { geo in
+            let size = min(geo.size.width, geo.size.height) - 100
+            VStack {
+                Spacer()
+                HStack {
+                    Spacer()
+                    ZStack(alignment: .topLeading) {
+                        BgImage()
+                        StonePitView()
+                    }
+                    .frame(width: size, height: size, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .clipShape(Circle())
+                    Spacer()
+                }
+
+                Spacer()
             }
         }
-        .clipShape(Circle())
     }
 }
 

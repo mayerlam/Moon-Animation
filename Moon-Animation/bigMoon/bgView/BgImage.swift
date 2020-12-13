@@ -9,8 +9,12 @@ import SwiftUI
 
 struct BgImage: View {
     var body: some View {
-        Image("bgBig")
-            .clipShape(Circle())
+        GeometryReader { geo in
+            let size = min(geo.size.width, geo.size.height)
+            Image("bgBig").resizable()
+                .frame(width: size , height: size, alignment: .topLeading)
+                .clipShape(Circle())
+        }
     }
 }
 
