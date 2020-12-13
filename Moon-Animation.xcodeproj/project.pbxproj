@@ -10,6 +10,7 @@
 		09BE7C0225863B780091EB65 /* BgImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BE7C0125863B780091EB65 /* BgImage.swift */; };
 		09BE7C0725863CDD0091EB65 /* BgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BE7C0625863CDD0091EB65 /* BgView.swift */; };
 		09BE7C122586420C0091EB65 /* StonePitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BE7C112586420C0091EB65 /* StonePitView.swift */; };
+		09BE7C1C258652A70091EB65 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BE7C1B258652A70091EB65 /* FaceView.swift */; };
 		09F3681225860BFB005B7453 /* Moon_AnimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F3681125860BFB005B7453 /* Moon_AnimationApp.swift */; };
 		09F3681425860BFB005B7453 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F3681325860BFB005B7453 /* ContentView.swift */; };
 		09F3681625860BFD005B7453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09F3681525860BFD005B7453 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		09BE7C0125863B780091EB65 /* BgImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BgImage.swift; sourceTree = "<group>"; };
 		09BE7C0625863CDD0091EB65 /* BgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BgView.swift; sourceTree = "<group>"; };
 		09BE7C112586420C0091EB65 /* StonePitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StonePitView.swift; sourceTree = "<group>"; };
+		09BE7C1B258652A70091EB65 /* FaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
 		09F3680E25860BFB005B7453 /* Moon-Animation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moon-Animation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09F3681125860BFB005B7453 /* Moon_AnimationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moon_AnimationApp.swift; sourceTree = "<group>"; };
 		09F3681325860BFB005B7453 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				09BE7C0125863B780091EB65 /* BgImage.swift */,
 				09BE7C0625863CDD0091EB65 /* BgView.swift */,
 				09BE7C112586420C0091EB65 /* StonePitView.swift */,
+				09BE7C1B258652A70091EB65 /* FaceView.swift */,
 			);
 			path = bgView;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				09F3684325860DE9005B7453 /* UIColorHelper.swift in Sources */,
 				09F3684B2586169B005B7453 /* StonePitParameters.swift in Sources */,
 				09BE7C122586420C0091EB65 /* StonePitView.swift in Sources */,
+				09BE7C1C258652A70091EB65 /* FaceView.swift in Sources */,
 				09BE7C0225863B780091EB65 /* BgImage.swift in Sources */,
 				09F3681425860BFB005B7453 /* ContentView.swift in Sources */,
 				09F3681225860BFB005B7453 /* Moon_AnimationApp.swift in Sources */,

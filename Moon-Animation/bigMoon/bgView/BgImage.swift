@@ -21,5 +21,7 @@ struct BgImage: View {
 struct BgImage_Previews: PreviewProvider {
     static var previews: some View {
         BgImage()
+            .previewLayout(.fixed(width: 100, height: 100))
+        
     }
 }
