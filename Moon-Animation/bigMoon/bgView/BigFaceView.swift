@@ -21,21 +21,32 @@ struct BigFaceView: View {
         GeometryReader { geo in
             let scale = min(geo.size.width, geo.size.height) / 270
             
-            ZStack(alignment: .topLeading) {
-                Eye
-                    .frame(width: size * scale, height: size * scale)
-                    .scaleEffect(0.7)
-                    .offset(x: leftEye.0 * scale , y: leftEye.1 * scale)
-                Eye
-                    .frame(width: size * scale, height: size * scale)
-                    .offset(x: rightEye.0 * scale , y: rightEye.1 * scale)
+            VStack {
+                Spacer()
+                HStack {
+                    // Left eye.
+                    Eye
+                        .frame(width: size.0 * scale, height: size.0 * scale)
+//                        .scaleEffect(0.7)
+//                        .offset(x: leftEye.0 * scale , y: leftEye.1 * scale)
+                    Spacer()
+                    // Right eye.
+                    Eye
+                        .frame(width: size.0 * scale, height: size.0 * scale)
+//                        .offset(x: rightEye.0 * scale , y: rightEye.1 * scale)
+                }
+                .frame(width: size.1 * scale, height: size.0 * scale)
+                Image("mounth")
+                Spacer()
             }
+            .frame(width: geo.size.width, height: geo.size.height)
+            .background(Color.red)
         }
     }
     
     private let leftEye: (CGFloat, CGFloat) = (61, 133.62)
     private let rightEye: (CGFloat, CGFloat) = (127, 132.62)
-    private let size: CGFloat = 19
+    private let size: (CGFloat, CGFloat) = (19, 85)
 }
 
 struct BigFaceView_Previews: PreviewProvider {
@@ -44,5 +55,7 @@ struct BigFaceView_Previews: PreviewProvider {
             .previewLayout(.fixed(width: 270, height: 270))
         BigFaceView()
             .previewLayout(.fixed(width: 400, height: 400))
+        BigFaceView()
+            .previewLayout(.fixed(width: 400, height: 200))
     }
 }
