@@ -9,10 +9,10 @@ import SwiftUI
 
 struct BigFaceView: View {
 
-    @Binding var pos: CGSize
-    @Binding var position: CGSize
+    @State var pos: CGSize
+    @State var position: CGSize
     
-    private var Eye: some View = {
+    private let Eye: some View = {
         Circle()
             .foregroundColor(Color.black)
     } ()
@@ -20,7 +20,7 @@ struct BigFaceView: View {
     var body: some View {
         GeometryReader { geo in
             let scale = min(geo.size.width, geo.size.height) / 270
-            let leftScale = position.width < 0 ? 1 + scaleSpeed(position.width, scale) : 1
+            let leftScale = (position).width < 0 ? 1 + scaleSpeed(position.width, scale) : 1
             let rightScale = position.width > 0 ? 1 - scaleSpeed(position.width, scale) : 1
             
             VStack {
@@ -99,9 +99,10 @@ struct BigFaceView: View {
 }
 
 struct BigFacePreView: View {
-    @State private var pod: CGSize = CGSize()
+    private var pod: CGSize = CGSize()
+    
     var body: some View {
-        BigFaceView(pos: $pod, position: $pod)
+        BigFaceView(pos: pod, position: pod)
     }
 }
 

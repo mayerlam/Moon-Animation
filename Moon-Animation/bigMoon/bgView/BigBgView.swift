@@ -21,7 +21,7 @@ struct BigBgView: View {
                         BigBgImage()
                         StonePitView()
                             .offset(x: speedRate(x:position.width + dragOffset.width), y: speedRate(y: position.height + dragOffset.height))
-                        BigFaceView()
+                        BigFaceView(pos: CGSize(), position: CGSize())
                     }
                     .frame(width: size, height: size, alignment: .center)
                     .clipShape(Circle())

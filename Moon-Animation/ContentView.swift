@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        BigFaceView()
+        BigFaceView(pos: CGSize(), position: CGSize())
     }
 }
 
