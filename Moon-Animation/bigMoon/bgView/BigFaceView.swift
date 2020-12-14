@@ -9,7 +9,6 @@ import SwiftUI
 
 struct BigFaceView: View {
     
-    @GestureState private var dragOffset = CGSize.zero
     @State private var pos = CGSize.zero
     @State private var position = CGSize.zero
     
@@ -21,7 +20,7 @@ struct BigFaceView: View {
     var body: some View {
         GeometryReader { geo in
             let scale = min(geo.size.width, geo.size.height) / 270
-            let totalOffset = dragOffset.width + position.width
+            let totalOffset = position.width
 //            var total: CGFloat = 0
 //            total = abs(scaleSpeed(totalOffset, scale)) <= 0.3 ? totalOffset : total
             let leftScale = totalOffset < 0 ? 1 + scaleSpeed(totalOffset, scale) : 1
@@ -43,8 +42,8 @@ struct BigFaceView: View {
                         .scaleEffect(rightScale)
                 }
                 .frame(width: size.1 * scale, height: size.0 * scale)
-                .offset(x: xOffsetSpeed(totalOffset))
-                Text("\(totalOffset), \(scale)")
+                .offset(x: xOffsetSpeed(totalOffset), y: yOffsetSpeed(position.height))
+//                Text("\(totalOffset), \(scale)")
                 // Mouth
                 ZStack {
                     Image("mouth").resizable()
@@ -57,9 +56,13 @@ struct BigFaceView: View {
             .frame(width: geo.size.width, height: geo.size.height)
             .gesture(
                 DragGesture()
-                    .updating($dragOffset, body: { (value, state, transaction) in
+                    .onChanged({ (value) in
                         if abs(xOffsetSpeed(value.translation.width + self.pos.width)) <= 30 * scale {
                             self.position.width = value.translation.width + self.pos.width
+                        }
+                        
+                        if abs(yOffsetSpeed(value.translation.height + self.pos.height)) <= 30 * scale {
+                            self.position.height = value.translation.height + self.pos.height
                         }
                     })
                     .onEnded({ (value) in
@@ -78,6 +81,11 @@ struct BigFaceView: View {
     func xOffsetSpeed(_ distance: CGFloat) -> CGFloat {
         let rate: CGFloat = 30.0 / 105.0
         return rate * distance
+    }
+    
+    func yOffsetSpeed(_ distacne: CGFloat) -> CGFloat {
+        let rate: CGFloat = 30.0 / 93.0
+        return rate * distacne
     }
     
     func scaleSpeed(_ distance: CGFloat, _ scale: CGFloat) -> CGFloat {
