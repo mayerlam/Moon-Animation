@@ -11,7 +11,7 @@ import SwiftUI
 struct Moon_AnimationApp: App {
     var body: some Scene {
         WindowGroup {
-            BgView()
+            BigBgView()
         }
     }
 }

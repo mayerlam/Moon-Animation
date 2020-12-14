@@ -1,5 +1,5 @@
 //
-//  BgImage.swift
+//  BigBgImage.swift
 //  Moon-Animation
 //
 //  Created by Mayer Lam on 2020/12/13.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BgImage: View {
+struct BigBgImage: View {
     var body: some View {
         GeometryReader { geo in
             let size = min(geo.size.width, geo.size.height)
@@ -18,9 +18,9 @@ struct BgImage: View {
     }
 }
 
-struct BgImage_Previews: PreviewProvider {
+struct BigBgImage_Previews: PreviewProvider {
     static var previews: some View {
-        BgImage()
+        BigBgImage()
             .previewLayout(.fixed(width: 100, height: 100))
         
     }

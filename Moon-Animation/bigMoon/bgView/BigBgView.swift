@@ -1,5 +1,5 @@
 //
-//  BgView.swift
+//  BigBgView.swift
 //  Moon-Animation
 //
 //  Created by Mayer Lam on 2020/12/13.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BgView: View {
+struct BigBgView: View {
     @GestureState private var dragOffset = CGSize.zero
     @State private var position = CGSize.zero
     var body: some View {
@@ -18,7 +18,7 @@ struct BgView: View {
                 HStack {
                     Spacer()
                     ZStack(alignment: .topLeading) {
-                        BgImage()
+                        BigBgImage()
                         StonePitView()
                             .offset(x: speedRate(x:position.width + dragOffset.width), y: speedRate(y: position.height + dragOffset.height))
                         
@@ -54,8 +54,8 @@ struct BgView: View {
     }
 }
 
-struct BgView_Previews: PreviewProvider {
+struct BigBgView_Previews: PreviewProvider {
     static var previews: some View {
-        BgView()
+        BigBgView()
     }
 }
