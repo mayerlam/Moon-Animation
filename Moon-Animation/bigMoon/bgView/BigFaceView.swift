@@ -35,8 +35,13 @@ struct BigFaceView: View {
                         .frame(width: size.0 * scale, height: size.0 * scale)
 //                        .offset(x: rightEye.0 * scale , y: rightEye.1 * scale)
                 }
-                .frame(width: size.1 * scale, height: size.0 * scale)
-                Image("mounth")
+                    .frame(width: size.1 * scale, height: size.0 * scale)
+                ZStack {
+                    Image("mouth").resizable()
+                        .frame(width: mouth.0 * scale, height: mouth.1 * scale)
+                    Image("tongue")
+                }
+                    
                 Spacer()
             }
             .frame(width: geo.size.width, height: geo.size.height)
@@ -46,6 +51,7 @@ struct BigFaceView: View {
     
     private let leftEye: (CGFloat, CGFloat) = (61, 133.62)
     private let rightEye: (CGFloat, CGFloat) = (127, 132.62)
+    private let mouth: (CGFloat, CGFloat) = (35, 19)
     private let size: (CGFloat, CGFloat) = (19, 85)
 }
 
