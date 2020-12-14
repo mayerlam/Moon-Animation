@@ -9,7 +9,8 @@ import SwiftUI
 
 struct BigFaceView: View {
     
-//    @GestureState private var dragOffset = CGSize.zero
+    @GestureState private var dragOffset = CGSize.zero
+    @State private var pos = CGSize.zero
     @State private var position = CGSize.zero
     
     private var Eye: some View = {
@@ -20,22 +21,31 @@ struct BigFaceView: View {
     var body: some View {
         GeometryReader { geo in
             let scale = min(geo.size.width, geo.size.height) / 270
+            let totalOffset = dragOffset.width + position.width
+//            var total: CGFloat = 0
+//            total = abs(scaleSpeed(totalOffset, scale)) <= 0.3 ? totalOffset : total
+            let leftScale = totalOffset < 0 ? 1 + scaleSpeed(totalOffset, scale) : 1
+            let rightScale = totalOffset > 0 ? 1 - scaleSpeed(totalOffset, scale) : 1
             
             VStack {
                 Spacer()
                 HStack {
+                    
                     // Left eye.
                     Eye
                         .frame(width: size.0 * scale, height: size.0 * scale)
-//                        .scaleEffect(0.7)
-//                        .offset(x: leftEye.0 * scale , y: leftEye.1 * scale)
+                        .scaleEffect(leftScale)
+
                     Spacer()
                     // Right eye.
                     Eye
                         .frame(width: size.0 * scale, height: size.0 * scale)
-//                        .offset(x: rightEye.0 * scale , y: rightEye.1 * scale)
+                        .scaleEffect(rightScale)
                 }
-                    .frame(width: size.1 * scale, height: size.0 * scale)
+                .frame(width: size.1 * scale, height: size.0 * scale)
+                .offset(x: xOffsetSpeed(totalOffset))
+                Text("\(totalOffset), \(scale)")
+                // Mouth
                 ZStack {
                     Image("mouth").resizable()
                         .frame(width: mouth.0 * scale, height: mouth.1 * scale)
@@ -45,7 +55,17 @@ struct BigFaceView: View {
                 Spacer()
             }
             .frame(width: geo.size.width, height: geo.size.height)
-            .background(Color.red)
+            .gesture(
+                DragGesture()
+                    .updating($dragOffset, body: { (value, state, transaction) in
+                        if abs(xOffsetSpeed(value.translation.width + self.pos.width)) <= 30 * scale {
+                            self.position.width = value.translation.width + self.pos.width
+                        }
+                    })
+                    .onEnded({ (value) in
+                        self.pos = self.position
+                    })
+            )
         }
     }
     
@@ -53,6 +73,17 @@ struct BigFaceView: View {
     private let rightEye: (CGFloat, CGFloat) = (127, 132.62)
     private let mouth: (CGFloat, CGFloat) = (35, 19)
     private let size: (CGFloat, CGFloat) = (19, 85)
+    private let limit: CGFloat = 30
+    
+    func xOffsetSpeed(_ distance: CGFloat) -> CGFloat {
+        let rate: CGFloat = 30.0 / 105.0
+        return rate * distance
+    }
+    
+    func scaleSpeed(_ distance: CGFloat, _ scale: CGFloat) -> CGFloat {
+        let rate: CGFloat = 0.3 / (105.0 * scale)
+        return rate * distance
+    }
 }
 
 struct BigFaceView_Previews: PreviewProvider {
