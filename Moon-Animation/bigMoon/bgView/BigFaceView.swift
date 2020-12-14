@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct BigFaceView: View {
-    
-    @State private var pos = CGSize.zero
-    @State private var position = CGSize.zero
+
+    @Binding var pos: CGSize
+    @Binding var position: CGSize
     
     private var Eye: some View = {
         Circle()
@@ -98,14 +98,23 @@ struct BigFaceView: View {
     }
 }
 
-struct BigFaceView_Previews: PreviewProvider {
-    static var previews: some View {
-        BigFaceView()
-//        BigFaceView()
-//            .previewLayout(.fixed(width: 270, height: 270))
-//        BigFaceView()
-//            .previewLayout(.fixed(width: 400, height: 400))
-//        BigFaceView()
-//            .previewLayout(.fixed(width: 400, height: 200))
+struct BigFacePreView: View {
+    @State private var pod: CGSize = CGSize()
+    var body: some View {
+        BigFaceView(pos: $pod, position: $pod)
     }
 }
+
+//struct BigFaceView_Previews: PreviewProvider {
+////    @State private var po: CGSize = .zero
+//    static var previews: some View {
+//        @State private var po: CGSize = .zero
+//        BigFaceView(pos: $po, position: $po)
+////        BigFaceView()
+////            .previewLayout(.fixed(width: 270, height: 270))
+////        BigFaceView()
+////            .previewLayout(.fixed(width: 400, height: 400))
+////        BigFaceView()
+////            .previewLayout(.fixed(width: 400, height: 200))
+//    }
+//}
