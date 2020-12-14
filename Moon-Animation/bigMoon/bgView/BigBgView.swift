@@ -21,7 +21,7 @@ struct BigBgView: View {
                         BigBgImage()
                         StonePitView()
                             .offset(x: speedRate(x:position.width + dragOffset.width), y: speedRate(y: position.height + dragOffset.height))
-                        
+                        BigFaceView()
                     }
                     .frame(width: size, height: size, alignment: .center)
                     .clipShape(Circle())
@@ -33,16 +33,16 @@ struct BigBgView: View {
             .background(Color(hex: 0x151845))
         }
         .edgesIgnoringSafeArea(.all)
-        .gesture(
-            DragGesture()
-                .updating($dragOffset, body: { (value, state, transaction) in
-                    state = value.translation
-                })
-                .onEnded({ (value) in
-                    self.position.height += value.translation.height
-                    self.position.width += value.translation.width
-                })
-        )
+//        .gesture(
+//            DragGesture()
+//                .updating($dragOffset, body: { (value, state, transaction) in
+//                    state = value.translation
+//                })
+//                .onEnded({ (value) in
+//                    self.position.height += value.translation.height
+//                    self.position.width += value.translation.width
+//                })
+//        )
     }
     
     func speedRate(x distance: CGFloat) -> CGFloat {

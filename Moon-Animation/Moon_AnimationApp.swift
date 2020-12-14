@@ -12,6 +12,9 @@ struct Moon_AnimationApp: App {
     var body: some Scene {
         WindowGroup {
             BigBgView()
+//            BigFaceView()
+//                .background(Color.white)
+//            ContentView()
         }
     }
 }

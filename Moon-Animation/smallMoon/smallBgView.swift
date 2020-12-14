@@ -6,15 +6,15 @@
 //
 
 import SwiftUI
-
-struct smallBgView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct smallBgView_Previews: PreviewProvider {
-    static var previews: some View {
-        smallBgView()
-    }
-}
+//
+//struct smallBgView: View {
+//    var body: some View {
+//        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+//    }
+//}
+//
+//struct smallBgView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        smallBgView()
+//    }
+//}

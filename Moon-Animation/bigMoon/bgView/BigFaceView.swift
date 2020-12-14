@@ -20,11 +20,8 @@ struct BigFaceView: View {
     var body: some View {
         GeometryReader { geo in
             let scale = min(geo.size.width, geo.size.height) / 270
-            let totalOffset = position.width
-//            var total: CGFloat = 0
-//            total = abs(scaleSpeed(totalOffset, scale)) <= 0.3 ? totalOffset : total
-            let leftScale = totalOffset < 0 ? 1 + scaleSpeed(totalOffset, scale) : 1
-            let rightScale = totalOffset > 0 ? 1 - scaleSpeed(totalOffset, scale) : 1
+            let leftScale = position.width < 0 ? 1 + scaleSpeed(position.width, scale) : 1
+            let rightScale = position.width > 0 ? 1 - scaleSpeed(position.width, scale) : 1
             
             VStack {
                 Spacer()
@@ -42,14 +39,20 @@ struct BigFaceView: View {
                         .scaleEffect(rightScale)
                 }
                 .frame(width: size.1 * scale, height: size.0 * scale)
-                .offset(x: xOffsetSpeed(totalOffset), y: yOffsetSpeed(position.height))
-//                Text("\(totalOffset), \(scale)")
+                .offset(x: xOffsetSpeed(position.width, 30.0), y: yOffsetSpeed(position.height, 30.0))
+
                 // Mouth
-                ZStack {
+                ZStack(alignment: .bottom) {
                     Image("mouth").resizable()
-                        .frame(width: mouth.0 * scale, height: mouth.1 * scale)
-                    Image("tongue")
+                        .frame(
+                            width: mouth.0 * scale - (position.width > 0 ? (15 / 105 * position.width) : 0),
+                            height: mouth.1 * scale)
+                    Image("tongue").resizable()
+                        .frame(width: tongue.0 * scale, height: tongue.1 * scale + (position.height < 0 ? (4.0 / 93.0) * position.height : 0))
+                        .scaleEffect(1.0 - (position.width > 0 ? (0.4 / 105 * position.width) : 0))
+                        
                 }
+                .offset(x: xOffsetSpeed(position.width, 34.0), y: yOffsetSpeed(position.height, 35.0))
                     
                 Spacer()
             }
@@ -57,11 +60,11 @@ struct BigFaceView: View {
             .gesture(
                 DragGesture()
                     .onChanged({ (value) in
-                        if abs(xOffsetSpeed(value.translation.width + self.pos.width)) <= 30 * scale {
+                        if abs(xOffsetSpeed(value.translation.width + self.pos.width, 30.0)) <= 30 * scale {
                             self.position.width = value.translation.width + self.pos.width
                         }
                         
-                        if abs(yOffsetSpeed(value.translation.height + self.pos.height)) <= 30 * scale {
+                        if abs(yOffsetSpeed(value.translation.height + self.pos.height, 30.0)) <= 30 * scale {
                             self.position.height = value.translation.height + self.pos.height
                         }
                     })
@@ -75,16 +78,17 @@ struct BigFaceView: View {
     private let leftEye: (CGFloat, CGFloat) = (61, 133.62)
     private let rightEye: (CGFloat, CGFloat) = (127, 132.62)
     private let mouth: (CGFloat, CGFloat) = (35, 19)
+    private let tongue: (CGFloat, CGFloat) = (16, 8)
     private let size: (CGFloat, CGFloat) = (19, 85)
     private let limit: CGFloat = 30
     
-    func xOffsetSpeed(_ distance: CGFloat) -> CGFloat {
-        let rate: CGFloat = 30.0 / 105.0
+    func xOffsetSpeed(_ distance: CGFloat, _ baseDistance: CGFloat) -> CGFloat {
+        let rate: CGFloat = baseDistance / 105.0
         return rate * distance
     }
     
-    func yOffsetSpeed(_ distacne: CGFloat) -> CGFloat {
-        let rate: CGFloat = 30.0 / 93.0
+    func yOffsetSpeed(_ distacne: CGFloat, _ baseDistance: CGFloat) -> CGFloat {
+        let rate: CGFloat = baseDistance / 93.0
         return rate * distacne
     }
     
@@ -97,10 +101,11 @@ struct BigFaceView: View {
 struct BigFaceView_Previews: PreviewProvider {
     static var previews: some View {
         BigFaceView()
-            .previewLayout(.fixed(width: 270, height: 270))
-        BigFaceView()
-            .previewLayout(.fixed(width: 400, height: 400))
-        BigFaceView()
-            .previewLayout(.fixed(width: 400, height: 200))
+//        BigFaceView()
+//            .previewLayout(.fixed(width: 270, height: 270))
+//        BigFaceView()
+//            .previewLayout(.fixed(width: 400, height: 400))
+//        BigFaceView()
+//            .previewLayout(.fixed(width: 400, height: 200))
     }
 }
