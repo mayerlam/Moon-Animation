@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        BigFaceView(pos: CGSize(), position: CGSize())
+        BigBgView()
     }
 }
 
